@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
-struct CerebralPalsyInventoryApp: App {
+struct CerebralPalsyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CPListView()
+                .modelContainer(for: Patient.self)
         }
     }
 }
